@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  background-color: rgba(187, 185, 185, 0.726);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main-heading {
+  text-align: center;
+  margin: 2rem auto;
+  font-weight: bold;
+  font-size: 2.8rem;
+}
+
+.app-container {
+  background-image: linear-gradient(
+    to left bottom,
+    #426aa6,
+    #3a8ac2,
+    #3babd9,
+    #4eccea,
+    #70ecf8
+  );
+  max-width: 90vw;
+  min-height: 50vh;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.question {
+  margin-top: 2rem;
+  padding: 1.5rem 4.5rem;
+  font-weight: bold;
+  text-align: justify;
+  line-height: 1.15;
+}
+
+.answer {
+  background-color: violet;
+  padding: 1rem;
+  border: 3px dashed #222;
+  margin: 1rem auto;
+  max-width: 60%;
+  min-width: 30%;
+  border-radius: 0.5rem;
+}
+
+.answer::placeholder {
+  font-family: cursive;
+  text-transform: capitalize;
+  color: #666;
+  font-weight: bold;
+  text-align: center;
+}
+
+.submit-answer {
+  font-family: cursive;
+  margin: 2rem auto;
+  min-width: 20%;
+  max-width: 50%;
+  background-color: #cbe95e;
+  padding: 1rem;
+  border-radius: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: 3px ridge indigo;
+  cursor: pointer;
+}
+
+.notice {
+  padding: 2rem;
+  background-color: rgb(241, 96, 43);
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: 2px double #222;
+  margin: 2rem 2rem;
+}
+
+.footer {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 700px) {
+  .question {
+    text-align: left;
+    line-height: 1.15;
+  }
+}
+@media screen and (max-width: 400px) {
+  .question {
+    text-align: left;
+    line-height: 1.15;
+    font-size: 1.5rem;
+  }
+}
