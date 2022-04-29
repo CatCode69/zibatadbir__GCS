@@ -12,7 +12,20 @@ html {
 }
 
 body {
-  background-color: rgba(187, 185, 185, 0.726);
+  /* background-color: rgba(187, 185, 185, 0.726); */
+  background-image: linear-gradient(
+    135deg,
+    hsl(310deg 100% 19%) 0%,
+    hsl(311deg 99% 22%) 11%,
+    hsl(313deg 97% 25%) 22%,
+    hsl(314deg 97% 29%) 33%,
+    hsl(315deg 96% 32%) 44%,
+    hsl(316deg 96% 36%) 56%,
+    hsl(317deg 97% 39%) 67%,
+    hsl(317deg 97% 43%) 78%,
+    hsl(318deg 99% 47%) 89%,
+    hsl(319deg 100% 50%) 100%
+  );
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -115,6 +128,24 @@ form {
   margin-bottom: 1rem;
   font-size: 1.4rem;
   text-align: center;
+}
+
+a:link {
+  color: red;
+  font-family: helvetica;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  color: black;
+}
+
+a:visited {
+  color: purple;
 }
 
 @media screen and (max-width: 700px) {
