@@ -17,7 +17,7 @@ const library = {
     },
     {
       desc: 'eye-opening to pain',
-      equivalents: ['patient only opens his/her eys to pain'],
+      equivalents: ['patient only opens his/her eyes to pain'],
       score: 2,
     },
     {
@@ -32,7 +32,7 @@ const library = {
     {
       desc: 'oriented',
       equivalents: [
-        "patient responds coherently and appropriately to questions such as the person's name and age, where they are and why, the year, month, etc",
+        "patient responds coherently and appropriately to questions such as the person's name and age, where they are and why, the year, month, etc.",
       ],
       score: 5,
     },

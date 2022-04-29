@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&family=Roboto+Slab:wght@100;300;400;500;600;700;800;900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -21,13 +23,16 @@ body {
 }
 
 .main-heading {
+  font-family: 'Roboto Slab', serif;
   text-align: center;
   margin: 2rem auto;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 2.8rem;
 }
 
 .app-container {
+  border: 2px solid rgba(68, 68, 68, 0.8);
+  font-family: 'Nunito', sans-serif;
   background-image: linear-gradient(
     to right bottom,
     #426aa6,
@@ -61,7 +66,7 @@ form {
   padding: 1.5rem 4.5rem;
   font-weight: bold;
   text-align: justify;
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 .answer {
@@ -79,7 +84,7 @@ form {
 }
 
 .answer::placeholder {
-  font-family: cursive;
+  font-family: inherit;
   text-transform: capitalize;
   color: #666;
   font-weight: bold;
@@ -87,7 +92,7 @@ form {
 }
 
 .submit-answer {
-  font-family: cursive;
+  font-family: inherit;
   margin: 2rem auto;
   min-width: 20%;
   max-width: 50%;
@@ -101,6 +106,7 @@ form {
 }
 
 .notice {
+  font-family: 'Nunito', sans-serif;
   padding: 2rem;
   background-color: rgb(241, 96, 43);
   text-align: center;
@@ -112,6 +118,7 @@ form {
 }
 
 .footer {
+  font-family: 'Roboto Slab', serif;
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.4rem;
@@ -120,7 +127,7 @@ form {
 
 a:link {
   color: red;
-  font-family: helvetica;
+  font-family: inherit;
   text-decoration: none;
 }
 
