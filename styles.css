@@ -59,7 +59,7 @@ form {
   padding: 1.5rem 4.5rem;
   font-weight: bold;
   text-align: justify;
-  line-height: 1.15;
+  line-height: 1.4;
 }
 
 .answer {
@@ -70,6 +70,10 @@ form {
   max-width: 60%;
   min-width: 30%;
   border-radius: 0.5rem;
+}
+
+.answer:focus {
+  outline: none;
 }
 
 .answer::placeholder {
@@ -99,7 +103,7 @@ form {
   background-color: rgb(241, 96, 43);
   text-align: center;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   border-radius: 5px;
   border: 2px double #222;
   margin: 2rem 2rem;
@@ -108,12 +112,16 @@ form {
 .footer {
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-size: 1.4rem;
 }
 
 @media screen and (max-width: 700px) {
   .question {
     text-align: left;
     line-height: 1.15;
+  }
+  .notice {
+    font-size: 1.3rem;
   }
 }
 @media screen and (max-width: 400px) {
