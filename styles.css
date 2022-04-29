@@ -114,12 +114,15 @@ form {
   font-size: 1.7rem;
   border-radius: 5px;
   border: 2px double #222;
-  margin: 2rem 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .footer {
   font-family: 'Roboto Slab', serif;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   margin-bottom: 1rem;
   font-size: 1.4rem;
   text-align: center;
@@ -143,19 +146,81 @@ a:visited {
   color: purple;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   .question {
-    text-align: left;
-    line-height: 1.15;
+    font-size: 2.3rem;
   }
   .notice {
     font-size: 1.3rem;
   }
 }
+@media screen and (max-width: 700px) {
+  .question {
+    font-size: 2.1rem;
+  }
+  .notice {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .question {
+    font-size: 1.5rem;
+    padding: 1.5rem 3rem;
+  }
+  .main-heading {
+    font-size: 2.4rem;
+  }
+  .footer {
+    font-size: 1.2rem;
+  }
+  .submit-answer {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .question {
+    font-size: 1.45rem;
+    padding: 1.5rem 3rem;
+  }
+  .main-heading {
+    font-size: 2rem;
+  }
+}
 @media screen and (max-width: 400px) {
   .question {
+    font-size: 1.4rem;
+    padding: 1.5rem 2.5rem;
+  }
+  .main-heading {
+    font-size: 1.8rem;
+  }
+  .answer {
+    max-width: 47%;
+  }
+  .answer::placeholder {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .question {
+    font-size: 1rem;
     text-align: left;
-    line-height: 1.15;
+    padding: 1.5rem 1.5rem;
+  }
+  .main-heading {
     font-size: 1.5rem;
+  }
+  .footer {
+    font-size: 1rem;
+  }
+  .submit-answer {
+    font-size: 0.9rem;
+  }
+  .answer::placeholder {
+    font-size: 0.8rem;
+  }
+  .notice {
+    font-size: 1rem;
   }
 }
