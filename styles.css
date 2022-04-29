@@ -30,6 +30,11 @@ body {
   font-size: 2.8rem;
 }
 
+.container {
+  position: relative;
+  top: 50%;
+}
+
 .app-container {
   border: 2px solid rgba(68, 68, 68, 0.8);
   font-family: 'Nunito', sans-serif;
@@ -42,13 +47,14 @@ body {
     #70ecf8
   );
   max-width: 90vw;
-  min-height: 50vh;
-  margin-left: auto;
-  margin-right: auto;
+  /* min-height: 50vh; */
+  max-height: fit-content;
+  margin: 2rem auto 5rem;
   font-size: 2.5rem;
   text-align: center;
   display: flex;
   flex-direction: column;
+  /* justify-content: space-between; */
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.3);
@@ -114,10 +120,7 @@ form {
   font-size: 1.7rem;
   border-radius: 5px;
   border: 2px double #222;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 1.5rem;
+  margin: 2rem 2rem 1.5rem;
 }
 
 .footer {
