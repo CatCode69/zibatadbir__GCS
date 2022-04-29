@@ -84,7 +84,7 @@ form {
 }
 
 .answer::placeholder {
-  font-family: inherit;
+  font-family: 'Nunito', sans-serif;
   text-transform: capitalize;
   color: #666;
   font-weight: bold;
