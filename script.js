@@ -259,3 +259,9 @@ btnModalClose.addEventListener('click', function () {
 // });
 
 // Copy
+
+var viewport = document.querySelector('meta[name=viewport]');
+viewport.setAttribute(
+  'content',
+  viewport.content + ', height=' + window.innerHeight
+);
