@@ -205,29 +205,30 @@ btnSubmitAnswer.addEventListener('click', function (e) {
     <label class='modal__text-label'>Best Motor Response</label>
     <p class='modal__text'>${mq}&nbsp;&rarr;&nbsp;${ms}</p>
   </div>
-`;
+  `;
 
     modalSection2.innerHTML = `
-<div>
-  <h2 class='section__2__heading'>GCS Score&nbsp;=&nbsp;${score}</h2>
-  <p class='modal__answer-exp'>
-  <span class="span__title1">Categorization:</span>
-  <br><br>
-  <span class="span__title2">Coma:</span> No eye opening, no ability to follow commands, no word verbalizations&nbsp;<span class="nowrap">(3-8)</span>
-  <br><br>
-  <span class="span__title2">Head Injury Classification:</span>
-  <br>
-  <span class="span__title3">Severe Head Injury:</span> GCS score of&nbsp;8&nbsp;or&nbsp;less<br>
-  <span class="span__title3">Moderate Head Injury:</span> GCS score of&nbsp;9&nbsp;to&nbsp;12<br>
-  <span class="span__title3">Mild Head Injury:</span> GCS score of&nbsp;13&nbsp;to&nbsp;15
-  </p>
-</div>
+  <div>
+    <h2 class='section__2__heading'>GCS Score&nbsp;=&nbsp;${score}</h2>
+    <p class='modal__answer-exp'>
+    <span class="span__title1">Categorization:</span>
+    <br><br>
+    <span class="span__title2">Coma:</span> No eye opening, no ability to follow commands, no word verbalizations&nbsp;<span class="nowrap">(3-8)</span>
+    <br><br>
+    <span class="span__title2">Head Injury Classification:</span>
+    <br>
+    <span class="span__title3">Severe Head Injury:</span> GCS score of&nbsp;8&nbsp;or&nbsp;less<br>
+    <span class="span__title3">Moderate Head Injury:</span> GCS score of&nbsp;9&nbsp;to&nbsp;12<br>
+    <span class="span__title3">Mild Head Injury:</span> GCS score of&nbsp;13&nbsp;to&nbsp;15
+    </p>
+  </div>
 
-`;
+  `;
+    overlay.style.zIndex = '5';
+    modal.style.zIndex = '10';
     modal.classList.remove('hidden');
     overlay.classList.remove('hidden');
     overlay.style.height = getComputedStyle(body).height;
-    console.log(window.scrollY);
     modal.style.top =
       parseFloat(getComputedStyle(body).height) / 2 + window.scrollY + 'px';
     // btnModalClose2.style.width = getComputedStyle(modal).width;
@@ -237,6 +238,8 @@ btnSubmitAnswer.addEventListener('click', function (e) {
 overlay.addEventListener('click', function () {
   modal.classList.add('hidden');
   overlay.classList.add('hidden');
+  overlay.style.zIndex = '-1';
+  modal.style.zIndex = '-1';
   inputAnswer.value = '';
   modalSection1.innerHTML = '';
   questionGenerator();
@@ -245,6 +248,8 @@ overlay.addEventListener('click', function () {
 btnModalClose.addEventListener('click', function () {
   modal.classList.add('hidden');
   overlay.classList.add('hidden');
+  overlay.style.zIndex = '-1';
+  modal.style.zIndex = '-1';
   inputAnswer.value = '';
   modalSection1.innerHTML = '';
   questionGenerator();
