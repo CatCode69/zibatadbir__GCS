@@ -192,6 +192,8 @@ btnSubmitAnswer.addEventListener('click', function (e) {
   } else {
     const answerType =
       +inputAnswer.value === score ? 'Correct 👏' : 'Try Again 😭';
+    inputAnswer.value = '';
+    inputAnswer.blur();
     const [[eq, es], [vq, vs], [mq, ms]] = segments;
     modalHeading.textContent = answerType;
     modalSection1.innerHTML = `
