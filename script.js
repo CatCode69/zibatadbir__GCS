@@ -117,7 +117,7 @@ const overlay = document.querySelector('.overlay');
 const modalSection1 = document.querySelector('.modal__section-1');
 const modalSection2 = document.querySelector('.modal__section-2');
 const modalHeading = document.querySelector('.modal__heading');
-const btnModalClose2 = document.querySelector('.modal__btn-close');
+// const btnModalClose2 = document.querySelector('.modal__btn-close');
 const body = document.body;
 const random = (min, max) => {
   return Math.trunc(Math.random() * (max - min + 1) + min);
@@ -257,3 +257,46 @@ btnModalClose.addEventListener('click', function () {
 //   modalSection1.innerHTML = '';
 //   questionGenerator();
 // });
+
+// Fixing Keyboadr Layout Change In Andoid:
+
+// Global boolean variable that holds the current orientation
+var pageInPortraitMode;
+
+// Listen for window resizes to detect orientation changes
+window.addEventListener('resize', windowSizeChanged);
+
+// Set the global orientation variable as soon as the page loads
+addEventListener('load', function () {
+  pageInPortraitMode = window.innerHeight > window.innerWidth;
+  document
+    .getElementById('viewport')
+    .setAttribute(
+      'content',
+      'width=' +
+        window.innerWidth +
+        ', height=' +
+        window.innerHeight +
+        ', initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
+    );
+});
+
+// Adjust viewport values only if orientation has changed (not on every window resize)
+function windowSizeChanged() {
+  if (
+    (pageInPortraitMode === true && window.innerHeight < window.innerWidth) ||
+    (pageInPortraitMode === false && window.innerHeight > window.innerWidth)
+  ) {
+    pageInPortraitMode = window.innerHeight > window.innerWidth;
+    document
+      .getElementById('viewport')
+      .setAttribute(
+        'content',
+        'width=' +
+          window.innerWidth +
+          ', height=' +
+          window.innerHeight +
+          ', initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
+      );
+  }
+}
