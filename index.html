@@ -12,7 +12,7 @@
     <div class="container">
       <h1 class="main-heading">Dynamic GCS Question Creator</h1>
       <main class="app-container">
-        <p class="question">Question</p>
+        <p class="question"></p>
         <form action="">
           <input
             class="answer"
@@ -22,8 +22,6 @@
             placeholder="Enter GCS Score"
             min="0"
           />
-        </form>
-        <form action="">
           <button class="submit-answer">Submit Answer</button>
         </form>
       </main>
@@ -35,6 +33,16 @@
         </p>
       </div>
     </div>
+    <div class="modal hidden">
+      <button class="modal__close">&times;</button>
+      <h1 class="modal__heading"></h1>
+      <div class="modal__answer-container">
+        <section class="modal__section-1"></section>
+        <section class="modal__section-2"></section>
+      </div>
+      <!-- <button class="modal__btn-close">Close</button> -->
+    </div>
+    <div class="overlay hidden"></div>
     <footer class="footer">
       <p>Created with ❤️ by Danial Abdoli</p>
       <p>
