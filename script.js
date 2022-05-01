@@ -259,30 +259,3 @@ btnModalClose.addEventListener('click', function () {
 // });
 
 // Copy
-
-var docwidth = window.innerWidth;
-var docheight = window.innerHeight;
-function pheigt_init() {
-  pheigt_set_prevent_height();
-  window.onresize = function () {
-    if (docwidth !== window.innerWidth || docheight < window.innerHeight) {
-      pheigt_upd_prevent_height();
-    }
-  };
-}
-function pheigt_set_prevent_height() {
-  document.querySelectorAll('.pheight').forEach(function (node) {
-    node.style.height = node.offsetHeight + 'px';
-  });
-}
-function pheigt_upd_prevent_height() {
-  document.querySelectorAll('.pheight').forEach(function (node) {
-    node.style.removeProperty('height');
-  });
-  setTimeout(function () {
-    pheigt_set_prevent_height();
-  }, 100);
-  docheight = window.innerHeight;
-  docwidth = window.innerWidth;
-}
-document.addEventListener('DOMContentLoaded', pheigt_init());
